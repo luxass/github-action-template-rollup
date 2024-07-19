@@ -1,6 +1,6 @@
 # github-action-template-rollup
 
-An opinionated github actions template
+An opinionated GitHub Actions Template using [rollup](https://rollupjs.org) for bundling.
 
 ## Try it now!
 
