@@ -27250,6 +27250,10 @@ async function run() {
     coreExports.info("This is a template action");
     const nameToGreet = coreExports.getInput("who-to-greet");
     coreExports.info(`Hello, ${nameToGreet}!`);
+    const message1 = {"message":"Hello, World!"} ?? "{}";
+    const message2 = {"message":"Hello, World!"} ?? "{}";
+    console.log("Message 1:", message1);
+    console.log("Message 2:", message2);
 }
 run().catch((err) => {
     console.error(err);

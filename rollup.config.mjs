@@ -3,6 +3,7 @@ import { builtinModules } from "node:module";
 import commonjs from "@rollup/plugin-commonjs";
 import json from "@rollup/plugin-json";
 import resolve from "@rollup/plugin-node-resolve";
+import replace from "@rollup/plugin-replace";
 import typescript from "@rollup/plugin-typescript";
 
 /**
@@ -24,6 +25,9 @@ export default {
     }),
     commonjs(),
     json(),
+    replace({
+      "globalThis.BROADCAST_MESSAGE": JSON.stringify({ message: "Hello, World!" }),
+    }),
   ],
   external: [
     ...builtinModules,
