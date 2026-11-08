@@ -19,20 +19,20 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@actions/core": "3.0.0"
+    "@actions/core": "catalog:runtime"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "29.0.2",
-    "@rollup/plugin-json": "6.1.0",
-    "@rollup/plugin-node-resolve": "16.0.3",
-    "@rollup/plugin-typescript": "12.3.0",
-    "@types/node": "25.5.0",
+    "@rollup/plugin-commonjs": "catalog:dev",
+    "@rollup/plugin-json": "catalog:dev",
+    "@rollup/plugin-node-resolve": "catalog:dev",
+    "@rollup/plugin-typescript": "catalog:dev",
+    "@types/node": "catalog:types",
     "oxfmt": "catalog:dev",
     "oxlint": "catalog:dev",
     "oxlint-tsgolint": "catalog:dev",
-    "rollup": "4.59.0",
-    "tslib": "2.8.1",
-    "typescript": "5.9.3"
+    "rollup": "catalog:dev",
+    "tslib": "catalog:dev",
+    "typescript": "catalog:dev"
   },
-  "packageManager": "pnpm@11.11.0"
+  "packageManager": "pnpm@12.17.0"
 }
