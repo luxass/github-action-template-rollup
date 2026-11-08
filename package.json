@@ -19,7 +19,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@actions/core": "3.0.0"
+    "@actions/core": "3.0.1"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "29.0.3",
