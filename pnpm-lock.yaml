@@ -164,6 +164,18 @@ settings:
 
 catalogs:
   dev:
+    '@rollup/plugin-commonjs':
+      specifier: 29.0.3
+      version: 29.0.3
+    '@rollup/plugin-json':
+      specifier: 6.1.0
+      version: 6.1.0
+    '@rollup/plugin-node-resolve':
+      specifier: 16.0.3
+      version: 16.0.3
+    '@rollup/plugin-typescript':
+      specifier: 12.3.1
+      version: 12.3.1
     oxfmt:
       specifier: 0.76.0
       version: 0.76.0
@@ -173,29 +185,46 @@ catalogs:
     oxlint-tsgolint:
       specifier: 7.0.2005
       version: 7.0.2005
+    rollup:
+      specifier: 4.67.4
+      version: 4.67.4
+    tslib:
+      specifier: 2.9.1
+      version: 2.9.1
+    typescript:
+      specifier: 6.0.3
+      version: 6.0.3
+  runtime:
+    '@actions/core':
+      specifier: 3.0.1
+      version: 3.0.1
+  types:
+    '@types/node':
+      specifier: 26.6.6
+      version: 26.6.6
 
 importers:
 
   .:
     dependencies:
       '@actions/core':
-        specifier: 3.0.1
+        specifier: catalog:runtime
         version: 3.0.1
     devDependencies:
       '@rollup/plugin-commonjs':
-        specifier: 29.0.3
+        specifier: catalog:dev
         version: 29.0.3(rollup@4.67.4)
       '@rollup/plugin-json':
-        specifier: 6.1.0
+        specifier: catalog:dev
         version: 6.1.0(rollup@4.67.4)
       '@rollup/plugin-node-resolve':
-        specifier: 16.0.3
+        specifier: catalog:dev
         version: 16.0.3(rollup@4.67.4)
       '@rollup/plugin-typescript':
-        specifier: 12.3.1
+        specifier: catalog:dev
         version: 12.3.1(rollup@4.67.4)(tslib@2.9.1)(typescript@6.0.3)
       '@types/node':
-        specifier: 26.6.6
+        specifier: catalog:types
         version: 26.6.6
       oxfmt:
         specifier: catalog:dev
@@ -207,13 +236,13 @@ importers:
         specifier: catalog:dev
         version: 7.0.2005
       rollup:
-        specifier: 4.67.4
+        specifier: catalog:dev
         version: 4.67.4
       tslib:
-        specifier: 2.9.1
+        specifier: catalog:dev
         version: 2.9.1
       typescript:
-        specifier: 6.0.3
+        specifier: catalog:dev
         version: 6.0.3
 
 packages:
